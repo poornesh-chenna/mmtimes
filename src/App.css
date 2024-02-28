@@ -1,0 +1,57 @@
+.brandName {
+  --hs: 225, 100%;
+  --paper: hsl(var(--hs), 25%);
+  --highlight: hsl(var(--hs), 45%);
+  --shadow: hsl(var(--hs), 15%);
+  display: flex;
+}
+
+h1 {
+  font-family: 'Titillium Web', sans-serif;
+  /* font-size: clamp(8rem, 23vw + 1rem, 20rem) !important; */
+  font-size: 5rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.1em;
+  display: grid;
+  place-items: center;
+  grid-template-areas: 'text';
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  background-image: linear-gradient(305deg, tomato, gold, cyan);
+  margin: 0;
+
+  & > *,
+  &::after {
+    grid-area: text;
+  }
+
+  &::after {
+    content: attr(data-text);
+    color: var(--paper);
+    transform: translate(0.1em, 0.1em);
+    filter: drop-shadow(0.015em 0.015em 0.025em var(--shadow));
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(var(--highlight), var(--paper));
+  }
+}
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+.contactBtn {
+  font-size: 3em;
+  font-family: fantasy;
+
+  transform: translate(-50%, -50%);
+  background-image: linear-gradient(gold, gold);
+  background-size: 100% 10px;
+  background-repeat: no-repeat;
+  background-position: 100% 0%;
+  transition: background-size 0.7s, background-position 0.5s ease-in-out;
+}
+
+.contactBtn:hover {
+  background-size: 100% 100%;
+  background-position: 0% 100%;
+  transition: background-position 0.7s, background-size 0.5s ease-in-out;
+}
