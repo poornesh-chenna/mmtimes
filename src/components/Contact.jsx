@@ -29,8 +29,8 @@ const Contact = () => {
       )
       setisLoading(false)
       console.log(response.data)
-      alert('Email sent successfully!')
-      setFormData({ name: '', email: '', message: '' })
+      alert('Got your message, We will reach out to you shortly 😊')
+      setFormData({ name: '', email: '', subject: '', message: '' })
     } catch (error) {
       console.error('Error sending email:', error)
       alert('Failed to send email. Please try again later.')
@@ -41,7 +41,7 @@ const Contact = () => {
     <div id="contact" className="my-6">
       <div className="grid sm:grid-cols-2 items-center gap-16 p-8 mx-auto max-w-4xl bg-white  rounded-md text-[#333] font-[sans-serif]">
         <div>
-          <h1 className="text-3xl font-extrabold">Lets Talk</h1>
+          <h1 className="text-4xl font-bold">Lets Talk</h1>
           <p className="text-sm text-gray-400 mt-3">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industrys standard dummy text
@@ -106,7 +106,7 @@ const Contact = () => {
             </ul>
           </div>
           <div className="mt-12">
-            <h2 className="text-lg font-extrabold">Socials</h2>
+            <h2 className="text-xl font-bold">Socials</h2>
             <ul className="flex mt-3 space-x-4">
               <li className="bg-[#e6e6e6cf] h-10 w-10 rounded-full flex items-center justify-center shrink-0">
                 <a href="">

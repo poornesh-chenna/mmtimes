@@ -1,6 +1,8 @@
+import { Link } from 'react-router-dom'
+
 const Home = () => {
   return (
-    <div className="flex mt-10 px-5">
+    <div className="flex mt-10 px-5 " style={{ height: '75vh' }}>
       <div className="w-full flex flex-row flex-wrap justify-evenly items-center">
         <div>
           <div className="brandName">
@@ -19,9 +21,9 @@ const Home = () => {
               Get innovative home appliances at affordable prices
             </p>
           </div>
-          <button>
+          <a href={'#contact'}>
             <span className="contactBtn"> Get In Touch! </span>
-          </button>
+          </a>
         </div>
         <img src="static/images/appliances.webp" alt="appliances" />
       </div>
